@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# if any command inside script returns error, exit and return that error 
-set -e
-
 # Make sure we are in same directory as this file
 cd "${0%/*}"
 
