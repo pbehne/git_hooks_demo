@@ -14,4 +14,4 @@ The following files need to be made executable:
 * tests/pre-commit.sh
 * tests/install_hooks.sh
 
-To install hooks, run `tetsts/install_hooks.sh`. This only needs to be done once, regardless of the branch.
+To install hooks, run `tests/install_hooks.sh`. This only needs to be done once, regardless of the branch.
