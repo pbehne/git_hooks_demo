@@ -1,14 +1,14 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
 
-# if any command inside script returns error, exit and return that error 
-set -e
+import sys, os
 
 # magic line to ensure that we're always inside the root of our application,
 # no matter from which directory we'll run script
 # thanks to it we can just enter `./scripts/run-tests.sh`
-cd "${0%/*}/.."
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 # let's fake failing test for now 
-echo "Running tests"
-echo "............................" 
-echo "Failed!" && exit 1
+print("Running tests")
+print("............................")
+print("Failed!")
+sys.exit(1)
