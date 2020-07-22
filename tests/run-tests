@@ -7,8 +7,10 @@ import sys, os
 # thanks to it we can just enter `./scripts/run-tests.sh`
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
+fail = False
+
 # let's fake failing test for now 
 print("Running tests (python)")
 print("............................")
-print("Failed!")
-sys.exit(1)
+print("Failed!" if fail else "Passed!")
+sys.exit(fail)
