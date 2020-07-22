@@ -5,10 +5,19 @@ set -e
 
 # magic line to ensure that we're always inside the root of our application,
 # no matter from which directory we'll run script
-# thanks to it we can just enter `./scripts/run-tests.sh`
+# thanks to it we can just enter `./tests/run-tests.sh`
 cd "${0%/*}/.."
+
+fail=1
 
 # let's fake failing test for now 
 echo "Running tests (bash)"
 echo "............................" 
-echo "Failed!" && exit 1
+
+if [[ $fail != 0 ]]; then
+    echo "Failed!"
+else
+    echo "Passed!"
+fi
+
+exit $fail
