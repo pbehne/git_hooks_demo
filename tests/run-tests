@@ -10,7 +10,7 @@ typeset -i fail=$(cat test_result.txt)
 echo "Running tests (bash)"
 echo "............................"
 
-if [[ $fail != 0 ]]; then
+if [[ $fail -ne 0 ]]; then
     echo "Failed!"
 else
     echo "Passed!"
