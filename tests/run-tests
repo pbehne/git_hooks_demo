@@ -10,7 +10,7 @@ os.chdir(os.path.dirname(os.path.realpath(__file__)))
 with open('test_result.txt', 'r') as f:
     fail = int(f.read())
 
-# let's fake failing test for now 
+# let's fake failing test for now
 print("Running tests (python)")
 print("............................")
 print("Failed!" if fail else "Passed!")
