@@ -2,12 +2,13 @@
 
 import sys, os
 
-# magic line to ensure that we're always inside the root of our application,
-# no matter from which directory we'll run script
-# thanks to it we can just enter `./tests/run-tests.sh`
+# Make sure we are in same directory as this file
+# Note realpath is needed to resolve symbolic links
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
-fail = False
+# Read test result from file
+with open('test_result.txt', 'r') as f:
+    fail = int(f.read())
 
 # let's fake failing test for now 
 print("Running tests (python)")
