@@ -8,7 +8,7 @@ import sys, os
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 # let's fake failing test for now 
-print("Running tests")
+print("Running tests (python)")
 print("............................")
 print("Failed!")
 sys.exit(1)
